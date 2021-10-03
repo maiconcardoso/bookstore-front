@@ -14,11 +14,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { CategoryReadComponent } from './components/views/category/category-read/category-read.component';
+import { CategoryCreateComponent } from './components/views/category/category-create/category-create.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,7 +32,8 @@ import { CategoryReadComponent } from './components/views/category/category-read
     FooterComponent,
     NavComponent,
     HomeComponent,
-    CategoryReadComponent
+    CategoryReadComponent,
+    CategoryCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,10 @@ import { CategoryReadComponent } from './components/views/category/category-read
     MatIconModule,
     MatCardModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
