@@ -1,3 +1,4 @@
+import { CategoryUpdateComponent } from './components/views/category/category-update/category-update.component';
 import { CategoryDeleteComponent } from './components/views/category/category-delete/category-delete.component';
 import { CategoryCreateComponent } from './components/views/category/category-create/category-create.component';
 import { CategoryReadComponent } from './components/views/category/category-read/category-read.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: "category/delete/:id",
     component: CategoryDeleteComponent
+  },
+  {
+    path: "category/update/:id",
+    component: CategoryUpdateComponent
   }
 ];
 
