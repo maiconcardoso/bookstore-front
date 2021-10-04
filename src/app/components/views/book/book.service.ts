@@ -3,6 +3,7 @@ import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Book } from './book.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,24 @@ export class BookService {
 
   baseUrl: string = environment.baseUrl;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private snackMessage: MatSnackBar) { }
 
   findAllByCategory(id_cat: string): Observable<Book[]> {
     const url = `${this.baseUrl}/books?category=${id_cat}`;
     return this.http.get<Book[]>(url);
   } 
 
+  create(book: Book, id_cat: string): Observable<Book> {
+    const url = `${this.baseUrl}/books?category=${id_cat}`;
+    return this.http.post<Book>(url, book);
+  }
+
+  message(str: string): void{
+    this.snackMessage.open(`${str}`, 'X', {
+      horizontalPosition: 'end',
+      verticalPosition: 'top',
+      duration: 3000
+    })
+  }
+ 
 }
