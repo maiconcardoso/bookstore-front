@@ -23,10 +23,11 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { CategoryReadComponent } from './components/views/category/category-read/category-read.component';
 import { CategoryCreateComponent } from './components/views/category/category-create/category-create.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CategoryDeleteComponent } from './components/views/category/category-delete/category-delete.component';
 import { CategoryUpdateComponent } from './components/views/category/category-update/category-update.component';
 import { BookReadAllComponent } from './components/views/book/book-read-all/book-read-all.component';
+import { BookCreateComponent } from './components/views/book/book-create/book-create.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { BookReadAllComponent } from './components/views/book/book-read-all/book
     CategoryCreateComponent,
     CategoryDeleteComponent,
     CategoryUpdateComponent,
-    BookReadAllComponent
+    BookReadAllComponent,
+    BookCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ import { BookReadAllComponent } from './components/views/book/book-read-all/book
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
